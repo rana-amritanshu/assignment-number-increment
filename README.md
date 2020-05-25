@@ -1,6 +1,6 @@
 # Counter Incrementor
 ---
-## Instruction to run
+## Instructions to run
 
 ### Development:
 - run **(sudo) docker-compose up**
