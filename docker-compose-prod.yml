@@ -1,0 +1,28 @@
+version: "3"
+services:
+    db-prod:
+        image: mongo:latest
+        restart: always
+        container_name: db-prod
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: password
+        ports:
+            - "9000:27017"
+        networks:
+            - assignment-prod-network
+    app-prod:
+        build:
+            context: ./
+            dockerfile: ./Dockerfileprod
+        ports:
+            - "9001:9001"
+        restart: always
+        depends_on:
+            - db-prod
+        networks:
+            - assignment-prod-network
+
+networks:
+    assignment-prod-network:
+        driver: bridge
