@@ -15,29 +15,39 @@
 ---
 ## Service is hosted for reference:
 ---
+```
 curl --location --request POST 'http://35.187.242.113/register' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"email": "john.doe@example.com",
 	"password": "1234"
 }'
+```
 
+```
 curl --location --request POST 'http://35.187.242.113/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"email": "john.doe@example.com",
 	"password": "1234"
 }'
+```
 
+```
 curl --location --request GET 'http://35.187.242.113/current' \
 --header 'Authorization: Bearer <token>'
+```
 
+```
 curl --location --request GET 'http://35.187.242.113/next' \
 --header 'Authorization: Bearer <token>'
+```
 
+```
 curl --location --request PUT 'http://35.187.242.113/current' \
 --header 'Authorization: Bearer <token>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"number": 69
 }'
+```
